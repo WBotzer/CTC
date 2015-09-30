@@ -9,11 +9,15 @@
 <script>
 var slideimages = new Array() // create new array to preload images
 slideimages[0] = new Image() // create new instance of image object
-slideimages[0].src = "Laptop.JPG" // set image src property to image path, preloading image in the process
+slideimages[0].src = "image1.jpg" // set image src property to image path, preloading image in the process
 slideimages[1] = new Image()
-slideimages[1].src = "pic1.JPG"
+slideimages[1].src = "image2.jpg"
 slideimages[2] = new Image()
-slideimages[2].src = "pic2.JPG"
+slideimages[2].src = "image3.jpg"
+slideimages[3] = new Image()
+slideimages[3].src = "image4.jpg"
+slideimages[4] = new Image()
+slideimages[4].src = "image5.jpg"
 </script>
 </head>
 
@@ -77,15 +81,15 @@ slideimages[2].src = "pic2.JPG"
   <p>Mock interviews.</p> <br>
 </div>
 
-<div align="center">
-  <img src="Laptop.JPG" id="slide" alt="laptop" width="500" height="350"/>
+<div style="padding-bottom:20px", align="center">
+  <img src="image1.jpg" id="slide" width="500" height="350"/>
     <script type="text/javascript">
     var step=0
     function slideit(){
      if (!document.images)
       return
      document.getElementById('slide').src = slideimages[step].src
-     if (step<2)
+     if (step<4) // This number should be one less than the ammount of pictures in array
       step++
      else
       step=0
