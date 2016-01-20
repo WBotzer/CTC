@@ -1,104 +1,134 @@
 <!Doctype html>
 <html>
+
 <head>
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link rel="icon" href="http://cs.sru.edu/favicon.ico" type="image/x-icon">
-  <script src="bootstrap.js"></script>
-  <title>CTC</title>
-  
-<script>
-var slideimages = new Array() // create new array to preload images
-slideimages[0] = new Image() // create new instance of image object
-slideimages[0].src = "img/image1.jpg" // set image src property to image path, preloading image in the process
-slideimages[1] = new Image()
-slideimages[1].src = "img/image2.jpg"
-slideimages[2] = new Image()
-slideimages[2].src = "img/image3.jpg"
-slideimages[3] = new Image()
-slideimages[3].src = "img/image4.jpg"
-slideimages[4] = new Image()
-slideimages[4].src = "img/image5.jpg"
-</script>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="icon" href="http://cs.sru.edu/favicon.ico" type="image/x-icon">
+    <script src="bootstrap.js"></script>
+    <title>CTC</title>
+
+    <script>
+        var slideimages = new Array() // create new array to preload images
+        slideimages[0] = new Image() // create new instance of image object
+        slideimages[0].src = "img/image1.jpg" // set image src property to image path, preloading image in the process
+        slideimages[1] = new Image()
+        slideimages[1].src = "img/image2.jpg"
+        slideimages[2] = new Image()
+        slideimages[2].src = "img/image3.jpg"
+        slideimages[3] = new Image()
+        slideimages[3].src = "img/image4.jpg"
+        slideimages[4] = new Image()
+        slideimages[4].src = "img/image5.jpg"
+    </script>
 </head>
 
 <body>
 
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-    <a class="navbar-brand" href="index.html">CTC</a>
-      </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">CTC</a>
+            </div>
 
 
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="eventCalendar.html">Event Calendar</a></li>
-          <li><a href="internetResources.html">Internet Resources</a></li>
-          <li><a href="tutorials.html">Tutorials</a></li>
-          <li><a href="execBoard.html">Executive Board</a></li>
-          <li><a href="contactUs.html">Contact Info</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="eventCalendar.html">Event Calendar</a>
+                    </li>
+                    <li><a href="internetResources.html">Internet Resources</a>
+                    </li>
+                    <li><a href="tutorials.html">Tutorials</a>
+                    </li>
+                    <li><a href="execBoard.html">Executive Board</a>
+                    </li>
+                    <li><a href="contactUs.html">Contact Info</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
 
-  <div style="float: right;
+    <div style="float: right;
       margin: 0 0 10px 10px">
-  <a class="twitter-timeline" href="https://twitter.com/sructc" data-widget-id="505415448469331968">Tweets by @sructc</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-  </div>
+        <a class="twitter-timeline" href="https://twitter.com/sructc" data-widget-id="505415448469331968">Tweets by @sructc</a>
+        <script>
+            ! function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + "://platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, "script", "twitter-wjs");
+        </script>
+    </div>
 
-  <div class="jumbotron">
-  <h1 style="text-align:center">What is the CTC?</h1>
-  <p style="text-align:center; padding-left:10px; padding-right:10px"> The Computer Technology Club is a student-run organization that functions under the guidance of our academic advisor: Dr. Paul Mullins.
-    The Executive Board of the CTC comprises of a President, Vice President, Secretary, Treasurer, and Public Relation officer who are elected annually in April. </p>
-</div>
+    <div class="jumbotron">
+        <h1 style="text-align:center">What is the CTC?</h1>
+        <p style="text-align:center; padding-left:10px; padding-right:10px"> The Computer Technology Club is a student-run organization that functions under the guidance of our academic advisor: Dr. Paul Mullins. The Executive Board of the CTC comprises of a President, Vice President, Secretary, Treasurer, and Public Relation officer who are elected annually in April. </p>
+    </div>
 
-<hr style= "background-color: #f0f0f0;
+    <hr style="background-color: #f0f0f0;
   width: 700px;
   float: center;">
 
-<h1 style="text-align:center">Upcoming Events</h1> <br> <br>
+    <h1 style="text-align:center">Upcoming Events</h1>
+    <br>
+    <br>
 
-<div style="padding-left: 40rem; font-size: 20px">
-  <p><b>October 1 - Laptop teardown and Hard Drive Swap</b></p>
-  <p>The CTC will help a student replace their hard drive as well as destory an unrelated computer.</p> <br>
-  
-  <p><b>October 27 - Bayer V.P. of IT</b></p>
-  <p>Listen to Bayer's Vice President of Information Technology speak from 11am-12:15pm in ATS 224.</p> <br>
+    <div style="padding-left: 40rem; font-size: 20px">
+        <p><b>October 1 - Laptop teardown and Hard Drive Swap</b>
+        </p>
+        <p>The CTC will help a student replace their hard drive as well as destory an unrelated computer.</p>
+        <br>
 
-  <p><b>October 29 - Alicia Slade</b></p>
-  <p>Learn what to and not to add to resumes and cover letters.</p> <br>
+        <p><b>October 27 - Bayer V.P. of IT</b>
+        </p>
+        <p>Listen to Bayer's Vice President of Information Technology speak from 11am-12:15pm in ATS 224.</p>
+        <br>
 
-  <p><b>November 12 - Alicia Slade</b></p>
-  <p>Mock interviews.</p> <br>
-</div>
+        <p><b>October 29 - Alicia Slade</b>
+        </p>
+        <p>Learn what to and not to add to resumes and cover letters.</p>
+        <br>
 
-<div style="padding-bottom:20px", align="center">
-  <img src="image1.jpg" id="slide" width="500" height="350"/>
-    <script type="text/javascript">
-    var step=0
-    function slideit(){
-     if (!document.images)
-      return
-     document.getElementById('slide').src = slideimages[step].src
-     if (step<4) // This number should be one less than the ammount of pictures in array
-      step++
-     else
-      step=0
-     //call function "slideit()" every 2.5 seconds
-     setTimeout("slideit()",4500)
-    }
-    slideit()
-    </script>
-</div>
+        <p><b>November 12 - Alicia Slade</b>
+        </p>
+        <p>Mock interviews.</p>
+        <br>
+    </div>
+
+    <div style="padding-bottom:20px" , align="center">
+        <img src="image1.jpg" id="slide" width="500" height="350" />
+        <script type="text/javascript">
+            var step = 0
+
+            function slideit() {
+                if (!document.images)
+                    return
+                document.getElementById('slide').src = slideimages[step].src
+                if (step < 4) // This number should be one less than the ammount of pictures in array
+                    step++
+                    else
+                        step = 0
+                        //call function "slideit()" every 2.5 seconds
+                setTimeout("slideit()", 4500)
+            }
+            slideit()
+        </script>
+    </div>
 
 </body>
+
 </html>
