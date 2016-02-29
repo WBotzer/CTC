@@ -4,25 +4,38 @@
 <head>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="icon" href="http://cs.sru.edu/favicon.ico" type="image/x-icon">
-    <script src="bootstrap.js"></script>
+    <script src="css/bootstrap.js"></script>
     <title>CTC</title>
 
     <script>
-        var slideimages = new Array() // create new array to preload images
-        slideimages[0] = new Image() // create new instance of image object
-        slideimages[0].src = "img/image1.jpg" // set image src property to image path, preloading image in the process
-        slideimages[1] = new Image()
-        slideimages[1].src = "img/image2.jpg"
-        slideimages[2] = new Image()
-        slideimages[2].src = "img/image3.jpg"
-        slideimages[3] = new Image()
-        slideimages[3].src = "img/image4.jpg"
-        slideimages[4] = new Image()
-        slideimages[4].src = "img/image5.jpg"
+        var slideimages = new Array(); // create new array to preload images
+        slideimages[0] = new Image(); // create new instance of image object
+        slideimages[0].src = "img/image1.jpg"; // set image src property to image path, preloading image in the process
+        slideimages[1] = new Image();
+        slideimages[1].src = "img/image2.jpg";
+        slideimages[2] = new Image();
+        slideimages[2].src = "img/image3.jpg";
+        slideimages[3] = new Image();
+        slideimages[3].src = "img/image4.jpg";
+        slideimages[4] = new Image();
+        slideimages[4].src = "img/image5.jpg";
+		
+		var step = 0
+		function slideIt() {
+			if (!document.images)
+				return;
+			document.getElementById('slide').src = slideimages[step].src
+			if (step < 4) // This number should be one less than the ammount of pictures in array
+				step++;
+				else
+					step = 0;
+					//call function "slideit()" every 2.5 seconds
+			setTimeout("slideIt()", 4500);
+		}
     </script>
 </head>
 
-<body>
+<body onload="slideIt();">
 
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -57,77 +70,63 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <div style="float: right;
-      margin: 0 0 10px 10px">
-        <a class="twitter-timeline" href="https://twitter.com/sructc" data-widget-id="505415448469331968">Tweets by @sructc</a>
-        <script>
-            ! function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0],
-                    p = /^http:/.test(d.location) ? 'http' : 'https';
-                if (!d.getElementById(id)) {
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = p + "://platform.twitter.com/widgets.js";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }
-            }(document, "script", "twitter-wjs");
-        </script>
-    </div>
+	<div class="container-fluid">
+		<div class="col-md-4">
+			<img src="img/image1.jpg" id="slide" class="img-responsive img-rounded" style="box-shadow: 10px 0px 100px #888888;" />
+			
+			<div class="jumbotron">
+				<h1 style="text-align:center">What is the CTC?</h1>
+				<p style="font-size: 1.25em"> The Computer Technology Club is a student-run organization that functions under the guidance of our academic advisor: Dr. Paul Mullins. The Executive Board of the CTC comprises of a President, Vice President, Secretary, Treasurer, and Public Relation officer who are elected annually in April. </p>
+			</div>
+		</div>
 
-    <div class="jumbotron">
-        <h1 style="text-align:center">What is the CTC?</h1>
-        <p style="text-align:center; padding-left:10px; padding-right:10px"> The Computer Technology Club is a student-run organization that functions under the guidance of our academic advisor: Dr. Paul Mullins. The Executive Board of the CTC comprises of a President, Vice President, Secretary, Treasurer, and Public Relation officer who are elected annually in April. </p>
-    </div>
+		<div class="col-md-4">
+			<h1 style="text-align:center">Upcoming Events</h1>
+			<hr style="background-color: #f0f0f0;
+			  width: 700px;
+			  float: center;">
+			<br>
 
-    <hr style="background-color: #f0f0f0;
-  width: 700px;
-  float: center;">
+			<div>
+				<p><b>October 1 - Laptop teardown and Hard Drive Swap</b>
+				</p>
+				<p>The CTC will help a student replace their hard drive as well as destory an unrelated computer.</p>
+				<br>
 
-    <h1 style="text-align:center">Upcoming Events</h1>
-    <br>
-    <br>
+				<p><b>October 27 - Bayer V.P. of IT</b>
+				</p>
+				<p>Listen to Bayer's Vice President of Information Technology speak from 11am-12:15pm in ATS 224.</p>
+				<br>
 
-    <div style="padding-left: 40rem; font-size: 20px">
-        <p><b>October 1 - Laptop teardown and Hard Drive Swap</b>
-        </p>
-        <p>The CTC will help a student replace their hard drive as well as destory an unrelated computer.</p>
-        <br>
+				<p><b>October 29 - Alicia Slade</b>
+				</p>
+				<p>Learn what to and not to add to resumes and cover letters.</p>
+				<br>
 
-        <p><b>October 27 - Bayer V.P. of IT</b>
-        </p>
-        <p>Listen to Bayer's Vice President of Information Technology speak from 11am-12:15pm in ATS 224.</p>
-        <br>
-
-        <p><b>October 29 - Alicia Slade</b>
-        </p>
-        <p>Learn what to and not to add to resumes and cover letters.</p>
-        <br>
-
-        <p><b>November 12 - Alicia Slade</b>
-        </p>
-        <p>Mock interviews.</p>
-        <br>
-    </div>
-
-    <div style="padding-bottom:20px" , align="center">
-        <img src="image1.jpg" id="slide" width="500" height="350" />
-        <script type="text/javascript">
-            var step = 0
-
-            function slideit() {
-                if (!document.images)
-                    return
-                document.getElementById('slide').src = slideimages[step].src
-                if (step < 4) // This number should be one less than the ammount of pictures in array
-                    step++
-                    else
-                        step = 0
-                        //call function "slideit()" every 2.5 seconds
-                setTimeout("slideit()", 4500)
-            }
-            slideit()
-        </script>
-    </div>
+				<p><b>November 12 - Alicia Slade</b>
+				</p>
+				<p>Mock interviews.</p>
+				<br>
+			</div>
+		</div>
+		
+		
+		<div class="col-md-4">
+			<a class="twitter-timeline" href="https://twitter.com/sructc" data-widget-id="505415448469331968">Tweets by @sructc</a>
+			<script>
+				! function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0],
+						p = /^http:/.test(d.location) ? 'http' : 'https';
+					if (!d.getElementById(id)) {
+						js = d.createElement(s);
+						js.id = id;
+						js.src = p + "://platform.twitter.com/widgets.js";
+						fjs.parentNode.insertBefore(js, fjs);
+					}
+				}(document, "script", "twitter-wjs");
+			</script>
+		</div>
+	<div class="container-fluid">
 
 </body>
 
